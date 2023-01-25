@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main Section Example</title>
+    <style>
+      /* define the class for different style */
+      .new-style {
+        color: blue;
+        font-size: 24pt;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Header Content</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>Navigation Link 1</li>
+        <li>Navigation Link 2</li>
+        <li>Navigation Link 3</li>
+      </ul>
+    </nav>
+    <main id="main-section">
+      <h2>Initial Main Section Content</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna a faucibus blandit, elit augue bibendum metus, non congue risus metus eget augue.</p>
+    </main>
+    <footer>
+      <p>Copyright © 2022</p>
+    </footer>
+    <button id="replace-button">Replace Content</button>
+    <script>
+      var button = document.getElementById("replace-button");
+      var mainSection = document.getElementById("main-section");
+
+      button.addEventListener("click", function(){
+        mainSection.innerHTML = `
+          <h2 class="new-style">New Main Section Content</h2>
+          <p class="new-style">This is the new content with different style</p>
+        `;
+      });
+    </script>
+  </body>
+</html>

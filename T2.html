@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Button Example</title>
+  </head>
+  <body>
+    <h1 id="heading">Initial Text</h1>
+    <button id="my-button">Click Me</button>
+    <script>
+      var button = document.getElementById("my-button");
+      var heading = document.getElementById("heading");
+      var text = ["I", "Love", "mangoes"];
+      var textIndex = 0;
+
+      //set initial background color to light green
+      document.body.style.backgroundColor = "lightgreen";
+
+      button.addEventListener("click", function(){
+        //change the text color to red
+        heading.style.color = "red";
+        //change the font size to 48pt
+        heading.style.fontSize = "48pt";
+        //change the text inside the <h1> tag
+        heading.innerHTML = text[textIndex];
+        //increment the text index for next click
+        textIndex = (textIndex + 1) % text.length;
+      });
+    </script>
+  </body>
+</html>

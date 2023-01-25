@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web Browser Grid</title>
+  <style>
+    /* Define grid layout */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+
+
+    }
+    /* Define grid items */
+    .grid-item {
+      text-align: center;
+
+    }
+    /* Define browser icons */
+
+    /* Style grid items */
+    .grid-item img {
+      width: 50px;
+      height: 50px;
+      background-color: #2196F3;
+        padding: 1px;
+    }
+
+    .grid-item p {
+
+      background-color: grey;
+      padding:10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div class="grid-item chrome">
+      <img src="https://cdn.pixabay.com/photo/2016/04/13/14/27/google-chrome-1326908__340.png">
+    </div>
+    <div class="grid-item firefox">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Firefox_logo%2C_2017.svg/1200px-Firefox_logo%2C_2017.svg.png">
+    </div>
+    <div class="grid-item safari">
+      <img src="https://toppng.com/uploads/preview/apple-safari-logo-11549680208swuyqxp97v.png">
+    </div>
+    <div class="grid-item edge">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Microsoft_Edge_logo_%282019%29.svg/480px-Microsoft_Edge_logo_%282019%29.svg.png">
+    </div>
+    <div class="grid-item">
+      <p>Chrome: 88.0</p>
+    </div>
+    <div class="grid-item">
+      <p>Firefox: 83.0</p>
+    </div>
+    <div class="grid-item">
+      <p>Safari: 14.0</p>
+    </div>
+    <div class="grid-item">
+      <p>Edge: 88.0</p>
+    </div>
+  </div>
+</body>
+</html>

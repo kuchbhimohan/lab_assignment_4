@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Heading Color Example</title>
+    <style>
+      /* define class for different color */
+      .red-color {
+        color: red;
+      }
+      .green-color {
+        color: green;
+      }
+      .blue-color {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="heading">Header Content</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>Navigation Link 1</li>
+        <li>Navigation Link 2</li>
+        <li>Navigation Link 3</li>
+      </ul>
+    </nav>
+    <main>
+      <h2>Main Section Content</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna a faucibus blandit, elit augue bibendum metus, non congue risus metus eget augue.</p>
+    </main>
+    <footer>
+      <p>Copyright © 2022</p>
+    </footer>
+    <button id="color-button">Change Color</button>
+    <script>
+      var button = document.getElementById("color-button");
+      var heading = document.getElementById("heading");
+      var colors = ["red-color", "green-color", "blue-color"];
+      var colorIndex = 0;
+
+      button.addEventListener("click", function(){
+        //1st way: change color by inline style
+        heading.style.color = colors[colorIndex];
+        //2nd way: change color by class
+        heading.className = colors[colorIndex];
+        //3rd way: change color by classList
+        heading.classList.add(colors[colorIndex]);
+        colorIndex = (colorIndex + 1) % colors.length;
+      });
+    </script>
+  </body>
+</html>
